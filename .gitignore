@@ -48,6 +48,5 @@ coverage.xml
 .DS_Store
 Thumbs.db
 
-# --- Assets Input & Output ---
-assets/input/
-assets/output/
+# --- Assets ---
+assets/
