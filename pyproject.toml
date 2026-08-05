@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-toolkit"
+version = "0.1.0"
+description = "A scalable collection of Python tools"
+readme = "README.md"
+authors = [{ name = "Your Name", email = "your.email@example.com" }]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: Microsoft :: Windows",
+]
+requires-python = ">=3.10"
+dependencies = ["rembg[gpu]==2.0.53", "pillow>=10.0.0", "numpy==1.26.4"]
+
+[project.scripts]
+ai-toolkit = "cli.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ai_media*", "utility_tools*", "cli*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
